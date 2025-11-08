@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --invoice-accent: #4338ca;
+  --invoice-muted: #6b7280;
+  --invoice-border: #e5e7eb;
+}
+
+body {
+  font-family: 'Sofia Sans', 'SofiaSans-Regular', sans-serif;
+  font-size: 16px;
+  background-color: #f3f4f6;
+  color: #111827;
+  margin: 0;
+}
+
+.font-invoice {
+  font-family: 'Sofia Sans', 'SofiaSans-Regular', sans-serif;
+}
+
+.summary-tile {
+  border-radius: 1.25rem;
+  border: 1px solid var(--invoice-border);
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(249, 250, 251, 1), rgba(238, 242, 255, 0.9));
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summary-label {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--invoice-muted);
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-top: 0.5rem;
+}
+
+.line-item-input {
+  border: 1px solid transparent;
+  background-color: #fff;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.65rem;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.line-item-input:focus,
+.line-item-input:hover {
+  border-color: var(--invoice-accent);
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(67, 56, 202, 0.15);
+}
+
+@media print {
+  body {
+    background-color: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  #invoice {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  input,
+  textarea,
+  select,
+  button {
+    border-color: transparent !important;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff !important;
+    color: inherit !important;
+    padding: 2px !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: transparent !important;
+  }
+}
