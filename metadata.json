@@ -1,0 +1,5 @@
+{
+  "name": "AI Invoice Generator",
+  "description": "A modern, easy-to-use invoice generator for services. Users can upload a logo, specify service details and price, and print a professional-looking invoice.",
+  "requestFramePermissions": []
+}
